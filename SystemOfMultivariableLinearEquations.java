@@ -8,7 +8,6 @@ import java.util.regex.Pattern;
 class SystemOfMultivariableLinearEquations {
     public static void main(String[] args) {
         String inputFilePath = "./input.txt";
-        
         execute(inputFilePath);
     }
 
