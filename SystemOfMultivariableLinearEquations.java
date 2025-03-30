@@ -13,11 +13,11 @@ class SystemOfMultivariableLinearEquations {
 
     static void execute(String inputFilePath) {
         List<List<Double>> matrix = readInputFile(inputFilePath);
-        printMatrix("ORIGINAL", matrix);
+        printMatrix("ORIGINAL MATRIX", matrix);
         createUpperTriangle(matrix);
         createLowerTriangle(matrix);
         printMatrix("REDUCED ROW ECHELON", matrix);
-        printSolution("SOLUTION", matrix);
+        printSolution("INTERSECTION POINT", matrix);
     }
 
     static void createUpperTriangle(List<List<Double>> matrix) {
