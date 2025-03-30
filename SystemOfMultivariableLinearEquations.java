@@ -14,13 +14,13 @@ class SystemOfMultivariableLinearEquations {
     static void execute(String inputFilePath) {
         List<List<Double>> matrix = readInputFile(inputFilePath);
         printMatrix("ORIGINAL", matrix);
-        createLowerTriangle(matrix);
         createUpperTriangle(matrix);
-        printMatrix("DECOMPOSED", matrix);
+        createLowerTriangle(matrix);
+        printMatrix("REDUCED ROW ECHELON", matrix);
         printSolution("SOLUTION", matrix);
     }
 
-    static void createLowerTriangle(List<List<Double>> matrix) {
+    static void createUpperTriangle(List<List<Double>> matrix) {
         int m = matrix.size();
 
         for (int j = 0; j < m; j++) {
@@ -34,7 +34,7 @@ class SystemOfMultivariableLinearEquations {
         }
     }
 
-    static void createUpperTriangle(List<List<Double>> matrix) {
+    static void createLowerTriangle(List<List<Double>> matrix) {
         int m = matrix.size();
 
         for (int j = m - 1; j >= 0; j--) {
